@@ -45,6 +45,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint16_t PROGMEM fn_actions[] = {
   [_MSPC] = ACTION_LAYER_TAP_KEY(_LW, KC_SPC), // Tap for space, hold for _LW
   [_MENTR]= ACTION_LAYER_TAP_KEY(_RS, KC_ENT), // Tap for enter, hold for _RS
+  [_MSPC] = ACTION_LAYER_TAP_KEY(_RS, KC_SPC), // Tap for space, hold for _LW
+  [_MENTR]= ACTION_LAYER_TAP_KEY(_LW, KC_ENT), // Tap for enter, hold for _RS
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
