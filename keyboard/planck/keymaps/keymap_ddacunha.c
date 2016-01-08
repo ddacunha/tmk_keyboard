@@ -18,8 +18,8 @@
 #define _LW 1
 #define _RS 2
 
-#define _MSPC 0
-#define _MENTR 1
+#define _MSPC 0 // fn _MSPC  Tap for space, hold for _LW
+#define _MENTR 1 // fn _MENTR Tap for enter, hold for _RS
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QW] = { /* Qwerty */
@@ -43,8 +43,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const uint16_t PROGMEM fn_actions[] = {
-  [_MSPC] = ACTION_LAYER_TAP_KEY(_LW, KC_SPC), // Tap for space, hold for _LW
-  [_MENTR]= ACTION_LAYER_TAP_KEY(_RS, KC_ENT), // Tap for enter, hold for _RS
   [_MSPC] = ACTION_LAYER_TAP_KEY(_RS, KC_SPC), // Tap for space, hold for _LW
   [_MENTR]= ACTION_LAYER_TAP_KEY(_LW, KC_ENT), // Tap for enter, hold for _RS
 };
